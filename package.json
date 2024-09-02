@@ -1,5 +1,5 @@
 {
-  "name": "Parky-pair-code",
+  "name": "Raphael-pair-code",
   "version": "1.0.0",
   "description": "Connect Whatsapp With Baileys Code Pairing",
   "main": "index.js",
@@ -13,9 +13,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jeanparker100/Parky-pair-code.git"
+    "url": "git+https://github.com/Limule3650/Raphael-pair-code.git"
   },
-  "author": "JeanParker",
+  "author": "Limule3650",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
