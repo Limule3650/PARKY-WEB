@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="shortcut icon" type="image/x-icon" href="./img/PARKY-MD.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Associer votre numéro</title>
+  <title>Pair code</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
@@ -106,10 +106,10 @@
     <div class="box">
       <div id="text">
         <i class="fa fa-phone-alt"></i>
-        <h3>Pair your number</h3>
-        <h6>Enter your number with country indicator</h6>
+        <h3>Pair code</h3>
+        <h6>Enter your number with country code</h6>
         <div class="input-container">
-          <input type="text" id="number" placeholder="Enter your number with country indicator">
+          <input type="text" id="number" placeholder="Enter your number with country code">
           <button id="submit">submit</button>
         </div>
         <a id="waiting-message" style="display: none;">in process master....</a>
@@ -128,9 +128,9 @@
       const number = numberInput.value.replace(/[^0-9]/g, "");
 
       if (!number) {
-        pairElement.innerHTML = '<span style="color:black;font-weight:bold">Master Enter your WhatsApp number with country indicator.</span>';
+        pairElement.innerHTML = '<span style="color:black;font-weight:bold">Master Enter your WhatsApp number with country code.</span>';
       } else if (number.length < 10) {
-        pairElement.innerHTML = '<span style="color:black;font-weight:bold">Format de numéro invalide</span>';
+        pairElement.innerHTML = '<span style="color:black;font-weight:bold">invalide format</span>';
       } else {
         const formattedNumber = formatNumber(number);
         numberInput.value = "+" + formattedNumber;
