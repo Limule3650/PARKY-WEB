@@ -13,7 +13,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-image: url("https://telegra.ph/file/9de0ab729f967730abbdd.jpg");
+      background-image: url("https://telegra.ph/file/bb9b9d3a6609587233284.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -106,13 +106,13 @@
     <div class="box">
       <div id="text">
         <i class="fa fa-phone-alt"></i>
-        <h3>Associez votre numéro</h3>
-        <h6>Entrez votre numéro avec l'indicatif du pays.</h6>
+        <h3>Pair your number</h3>
+        <h6>Enter your number with country indicator</h6>
         <div class="input-container">
-          <input type="text" id="number" placeholder="Entrez votre numéro avec l'indicatif du pays">
-          <button id="submit">Envoyer</button>
+          <input type="text" id="number" placeholder="Enter your number with country indicator">
+          <button id="submit">submit</button>
         </div>
-        <a id="waiting-message" style="display: none;">En cours...</a>
+        <a id="waiting-message" style="display: none;">in process master....</a>
         <main id="pair"></main>
       </div>
     </div>
@@ -128,7 +128,7 @@
       const number = numberInput.value.replace(/[^0-9]/g, "");
 
       if (!number) {
-        pairElement.innerHTML = '<span style="color:black;font-weight:bold">Veuillez entrer votre numéro WhatsApp avec l’indicatif du pays.</span>';
+        pairElement.innerHTML = '<span style="color:black;font-weight:bold">Master Enter your WhatsApp number with country indicator.</span>';
       } else if (number.length < 10) {
         pairElement.innerHTML = '<span style="color:black;font-weight:bold">Format de numéro invalide</span>';
       } else {
@@ -142,7 +142,7 @@
           const code = data.code || "Service indisponible";
           pairElement.innerHTML = `<span id="copy" onclick="copyToClipboard('${code}')" style="color:red;font-weight:bold">CODE : <span style="color:black;font-weight:bold">${code}</span></span>`;
         } catch (error) {
-          pairElement.innerHTML = '<span style="color:black;font-weight:bold">Erreur lors de la récupération du code. Veuillez réessayer.</span>';
+          pairElement.innerHTML = '<span style="color:black;font-weight:bold">An error occurred while generating your code. please try again.</span>';
         } finally {
           waitingMessage.style.display = 'none';
         }
@@ -161,7 +161,7 @@
     function copyToClipboard(text) {
       navigator.clipboard.writeText(text).then(() => {
         const copyElement = document.getElementById("copy");
-        copyElement.innerText = "COPIÉ";
+        copyElement.innerText = "COPIED";
         copyElement.style.color = "blue";
         setTimeout(() => {
           copyElement.innerText = "CODE : " + text;
