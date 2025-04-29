@@ -20,7 +20,7 @@
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@colors/colors": "1.5.0",
-    "@whiskeysockets/baileys": "^6.6.0",
+    "@whiskeysockets/baileys": "^6.7.16",
     "cfonts": "~2.10.0",
     "chalk": "~4.1.0",
     "fs-extra": "^11.1.1",
