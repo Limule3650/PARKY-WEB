@@ -59,14 +59,14 @@ router.get('/', async (req, res) => {
             if (phoneNumber) {
                 phoneNumber = phoneNumber.replace(/[^0-9]/g, '');
                 if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-                    return res.status(400).send("Start with the country code of your WhatsApp number, example : +237698581946");
+                    return res.status(400).send("Start with the country code of your WhatsApp number, example : +509xxxx");
                 }
             } else {
-                phoneNumber = await question(chalk.bgBlack(chalk.greenBright("Enter your WhatsApp number \nExample : +237698581946 : ")));
+                phoneNumber = await question(chalk.bgBlack(chalk.greenBright("Enter your WhatsApp number \nExample : +509xxxx : ")));
                 phoneNumber = phoneNumber.replace(/[^0-9]/g, '');
 
                 if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-                    return res.status(400).send("Start with the country code of your WhatsApp number, example : +237698581946");
+                    return res.status(400).send("Start with the country code of your WhatsApp number, example : +509xxx");
                 }
             }
 
@@ -83,7 +83,7 @@ router.get('/', async (req, res) => {
             const { connection, lastDisconnect } = s;
             if (connection === "open") {
                 await delay(10000);
-                await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `┏━『 DEATH RAPHAEL-BUG 』━◧
+                await XeonBotInc.sendMessage(XeonBotInc.user.id, { text: `┏━『 GOTAR MD CONNECTED 』━◧
 ┣⌬ *CONNECTED*
 ┣⌬ *SESSION= CREDS.JSON 📁✅*
 ┗━━━━━━━━━━━━━━━◧
@@ -91,23 +91,23 @@ router.get('/', async (req, res) => {
 ━━━━━━━━━━━━━━━━━━━
 1 || GITHUB = https://github.com/Limule3650/Death-Raphael-bug 
 ━━━━━━━━━━━━━━━━━━━
-2 || GROUP = https://chat.whatsapp.com/Bph2Nt7qdqf1p1pQmkIy9U
+2 || GROUP = https://chat.whatsapp.com/HTQAifGtNsrBhcGTm00mCt
 ━━━━━━━━━━━━━━━━━━━
-3 || WHATSAPP CHANNEL = https://whatsapp.com/channel/0029Vafhjw0IXnlonRAQMM2l
+3 || WHATSAPP CHANNEL = https://whatsapp.com/channel/0029VbAJA1THwXbA74a5pO1s
 ━━━━━━━━━━━━━━━━━━━
 ➡️ SUPPORT MY CHANNEL 
-
-📞 WANT TO CONTACT LIMULE ?♦ https://wa.me/+237698581946 ♦
+ ♦
+ https://whatsapp.com/channel/0029VbAJA1THwXbA74a5pO1s
 ━━━━━━━━━━━━━━━━━━━
 
-©2025 *Limule Solitarus*` });
+©2025 *Gotar Wrld*` });
 
                 let sessionXeon = fs.readFileSync('./sessions/creds.json');
                 await delay(2000);
                 const xeonses = await XeonBotInc.sendMessage(XeonBotInc.user.id, { document: sessionXeon, mimetype: 'application/json', fileName: 'creds.json' });
                 await XeonBotInc.groupAcceptInvite("Kjm8rnDFcpb04gQNSTbW2d");
                 await XeonBotInc.sendMessage(XeonBotInc.user.id, {
-                    text: `*PARKY-BUG-BOT*
+                    text: `*GOTAR-MD*
 
 
 
